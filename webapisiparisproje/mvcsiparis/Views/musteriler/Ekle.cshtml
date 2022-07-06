@@ -1,0 +1,43 @@
+﻿@model mvcsiparis.Models.mvcmusterilermodel
+
+@{
+    ViewBag.Title = "Ekle";
+}
+
+<h2>Ekle</h2>
+<div class="form-body">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.musteriid)
+        <div class="form-control" style="background-color :cornflowerblue;">
+            @Html.LabelFor(model => model.ad)<br />
+            @Html.EditorFor(model => model.ad)
+            @Html.ValidationMessageFor(model => model.ad)
+        </div>
+        <div class="form-control" style="background-color :cornflowerblue;">
+            @Html.LabelFor(model => model.soyad)<br />
+            @Html.EditorFor(model => model.soyad)
+            @Html.ValidationMessageFor(model => model.soyad)
+        </div>
+        <div class="form-control" style="background-color :cornflowerblue;">
+            @Html.LabelFor(model => model.adres)<br />
+            @Html.EditorFor(model => model.adres)
+            @Html.ValidationMessageFor(model => model.adres)
+        </div>
+        <div class="form-control" style="background-color :cornflowerblue;">
+            @Html.LabelFor(model => model.sehir)<br />
+            @Html.EditorFor(model => model.sehir)
+            @Html.ValidationMessageFor(model => model.sehir)
+        </div>
+        <div class="form-control">
+            <input type="submit" value="Kaydet" class="btn acordion-button" />
+            <input type="reset" value="Temizle" class="btn acordion-button" />
+        </div>
+    }
+</div>
+@*@section scripts
+    {
+    @Scripts.Render("~/bundles/jqueryval");
+
+    }*@
+

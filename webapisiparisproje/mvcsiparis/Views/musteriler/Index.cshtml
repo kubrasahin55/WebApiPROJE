@@ -1,0 +1,71 @@
+﻿@model IEnumerable<mvcsiparis.Models.mvcmusterilermodel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @*//bu kısma eklemeler yaptık*@
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a href="@Url.Action("EKLE","musteriler")" class="btn btn-danger"><i class="fa fa-plus-square"></i>Müşteri Ekle</a>
+</p>
+<table class="table">
+    <thead class="table-danger">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.soyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.adres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sehir)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.soyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sehir)
+            </td>
+            <td>
+                <a href="@Url.Action("EKLE","musteriler",new { id = item.musteriid })" class="btn btn-default"><i class="fa fa-pencil-square"></i>Güncelle</a>
+                <a onclick="Sil(@item.musteriid)" class="btn btn-default"><i class="fa fa-trash"></i>Sil</a>
+            </td>
+        </tr>
+    }
+
+</table>
+@section scripts
+    {
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]';
+            if (successMessage != '') alertify.success(successMessage);
+        });
+        function Sil(id)
+        {
+
+            alertify.confirm('silme işlemi', 'Kayıtı silmek istiyormusunuz?', function () {
+                window.location.href = '@Url.Action("Sil","musteriler")/' + id;
+            }, null);
+        }
+    </script>
+}
+

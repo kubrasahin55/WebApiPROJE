@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="siparisapiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblkullanici">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullaniciadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblmusteriler">
+    <Key>
+      <PropertyRef Name="musteriid" />
+    </Key>
+    <Property Name="musteriid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="adres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sehir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblsiparisdetay">
+    <Key>
+      <PropertyRef Name="siparisdetayid" />
+    </Key>
+    <Property Name="siparisdetayid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="siparisaciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="siparisadet" Type="Int32" />
+    <Property Name="siparisfiyat" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblsiparisler">
+    <Key>
+      <PropertyRef Name="siparisid" />
+    </Key>
+    <Property Name="siparisid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="siparisadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="siparistarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="siparisapiEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblkullanicis" EntityType="Self.tblkullanici" />
+    <EntitySet Name="tblmusterilers" EntityType="Self.tblmusteriler" />
+    <EntitySet Name="tblsiparisdetays" EntityType="Self.tblsiparisdetay" />
+    <EntitySet Name="tblsiparislers" EntityType="Self.tblsiparisler" />
+  </EntityContainer>
+</Schema>

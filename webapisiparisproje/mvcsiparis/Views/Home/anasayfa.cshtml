@@ -1,0 +1,488 @@
+﻿@*@{
+        ViewBag.Title = "anasayfa";
+    }
+
+    <h2>anasayfa</h2>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>MVC STOK TAKİBİ</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">MVC STOK TAKİBİ</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">ÜRÜNLERİMİZ</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">HAKKIMIZDA</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">İLETİŞİM</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="@Url.Action("Index","musteriler")">MÜŞTERİLER</a></li> <!--//SAYFAYA YÖNLENDİR-->
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="@Url.Action("Index","siparisler")">SİPARİŞLER</a></li> <!--//SAYFAYA YÖNLENDİR-->
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="@Url.Action("Index","siparisdetay")">SİPARİŞ DETAYLARI</a></li> <!--//SAYFAYA YÖNLENDİR-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="~/assets/img/10.svg" alt="..." />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">ÖZ MAĞAZALARI</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">Beyaz Eşya - Elektronik Aletler - Küçük Ev Eşyaları</p>
+        </div>
+    </header>
+    <!-- Portfolio Section-->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">ÜRÜNLERİMİZ</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="~/assets/img/portfolio/besya.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="~/assets/img/portfolio/kucukesya.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="~/assets/img/portfolio/pc.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 4-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="~/assets/img/portfolio/tel.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 5-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="~/assets/img/portfolio/pcekipman.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 6-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="~/assets/img/portfolio/telekipman.png" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">HAKKIMIZDA</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-4 ms-auto"><p class="lead">Öz mağazalarının temeli 1996 yılında başladı. Özmağazam ve bayisi olduğumuz diğer grup markalarımızla birlikte, yenilikçi, teknolojiyi takip eden ve kullanan, kalite ve güvenceye önem vererek tüketici ihtiyaçlarına hızlı çözümler üretip, kullanıma sunan bir bakış açısına sahiptir. </p></div>
+                <div class="col-lg-4 me-auto"><p class="lead">Özmağazamın ilke ve prensipleri, mesleğin saygınlığını ve mesleki hakları korumak için çaba göstermek, saydam ve güvenilirlik amacını benimseyerek ayrımcılığa düşmeden tüm müşterilerine aynı mesafade durmak, firmanın standartlarını ve kalitesini yükseltmek için teknolojiyi takip etmektir.</p></div>
+            </div>
+            <!-- About Section Button-->
+            <!--<div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                    <i class="fas fa-download me-2"></i>
+                    Free Download!
+                </a>
+            </div>-->
+        </div>
+    </section>
+    <!-- Contact Section-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">İLETİŞİM</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+
+
+            <!-- Contact Section Form-->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <label for="name">Adınız</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">Ad giriniz.</div>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                            <label for="email">E-posta </label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">E-posta giriniz.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">E-posta geçerli değil.</div>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                            <label for="phone">Telefon Numaranız</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">Telefon numarası giriniz.</div>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <label for="message">Mesajınız</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">Mesaj giriniz.</div>
+                        </div>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">
+                                    Form gönderimi başarılı!
+                                </div>
+                                Bu formu etkinleştirmek için şu adresten kaydolun
+                                <br />
+                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Mesaj gönderilirken hata oluştu!</div></div>
+                        <!-- Submit Button-->
+                        <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Konum</h4>
+                    <p class="lead mb-0">
+                        2215 Üsküdar
+                        <br />
+                        İstanbul, MO 65243
+                    </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Webde Arayın</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://tr-tr.facebook.com/login/device-based/regular/login/?login_attempt=1"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoidHIifQ%3D%3D%22%7D"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://tr.linkedin.com/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+
+                </div>
+                <!-- Footer About Text-->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">Serbest Çalışan Hakkında</h4>
+                    <p class="lead mb-0">
+                        Freelance, kullanımı ücretsiz, MIT lisanslı bir Bootstrap temasıdır.
+                        <a href="http://startbootstrap.com">Start Bootstrap</a>
+                        .
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright &copy; Your Website 2021</small></div>
+    </div>
+    <!-- Portfolio Modals-->
+    <!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Beyaz Eşyalar</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="~/assets/img/portfolio/besya.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Evinizi daha işlevsel hale getirmek ve yenilikçi teknolojilerden yararlanmak için beyaz eşya modellerine göz gezdirebilirsiniz. Beyaz eşyaların doğa dostu özelliklere sahip olması, minimum oramda elektrik ve su tüketimi gerçekleştirmenizi sağlar. Öte yandan zamandan tasarruf sağlamak için de beyaz eşyaların sahip olduğu kullanıcı dostu özelliklerden yararlanabilirsiniz. Düşük ses seviyesi ile çalışan ürünler tasarlayan beyaz eşya markaları, gürültü problemi ile karşılaşmadan kullanım gerçekleştirmenizi sağlar. Renk tonları açısından birçok alternatif ürünün bulunması, beğenilerinize ve evinizdeki diğer ürünlere uyumlu tasarımlara sahip beyaz eşyalara sahip olmanıza imkân tanır. Boyutlarına ve kapasitelerine göre inceleyebileceğiniz beyaz eşyalar arasından ihtiyaçlarınızla uyumlu modelleri kolayca seçebilirsiniz.</p>
+                                @*<button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Kapat
+                                    </button>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Küçük Ev Aletleri</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="~/assets/img/portfolio/kucukesya.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Ev ve yaşam kategorisi içinde en çok karşılaştığımız ürünlerden biri de küçük ev aletleridir. Küçük ev aletleri sayesinde ev işleri daha kolay bir hale geliyor. Elektrikli küçük ev aletleri kullandığınız zaman hem daha az yorulursunuz hem de daha az zaman harcarsınız. Yaşadığımız zamanı daha konforlu bir hale getirmek daima önceliğimiz olmalıdır. Ev işlerinin daha pratik bir şekilde tamamlanması küçük ev aletlerinin her biri kendi kategorisinde oldukça gereklidir. Markalar tarafından bu amaçla tasarlanan çok sayıda küçük ev aleti bulunmaktadır. Öz mağazaları geniş ürün yelpazesi ile istediğiniz ürüne kısa süre içinde sahip olmanızı sağlıyor.</p>
+                                @*<button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Kapat
+                                    </button>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">BİLGİSAYARLAR</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="~/assets/img/portfolio/pc.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    Günümüz dünyasında insanların iş ve eğlence için en çok kullandıkları elektronik eşyaların başında bilgisayarlar geliyor. Bilgisayarlar hem ofislerde hem de evlerde yoğun bir şekilde kullanılıyor. Bugün bilgisayar sektöründe farklı markalar tarafından üretilmiş binlerce bilgisayar modeli bulunuyor.
+                                    En kaliteli bilgisayar modellerine en uygun fiyatlarla ulaşmanın yolu Öz Mağazalarından geçiyor. Öz Mağazalarındaki bilgisayar fiyatları işverenlerin ve ailelerin bütçelerini sarsmıyor. Öz Mağazalarında Apple, Casper, Hp, Lenovo, Asus gibi markaların en kaliteli bilgisayar modelleri cep yakmayan fiyatlarla sizlerin beğenisine sunuluyor. Öz Mağazaları, en kaliteli modelleri en uygun fiyatlara sunması ile müşterilerinin aile bütçelerine katkıda bulunuyor. Üstelik Öz Mağazalarının dönemsel indirimleri ve kampanyaları da sizlerin hayalinizdeki bilgisayar modellerine çok daha avantajlı fiyatlarla sahip olmanızı sağlıyor. Siz de Öz Mağazalarının avantajlı bilgisayar fiyatları ile hemen hayatınızı kolaylaştırabilirsiniz.
+                                </p>
+                                @*<button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Kapat
+                                    </button>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 4-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Telefonlar</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="~/assets/img/portfolio/tel.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    Günlük hayatımızda en çok kullandığımız eşyalarımızın başında telefonlar geliyor. Hayatımızı kolaylaştıran tüm bu cihazların satın alınması söz konusu olduğunda akıllara elbette Öz Mağazaları geliyor.  Öz Mağazalarının uygun fiyatları ve dönemsel kampanyaları telefon alışverişini daha keyifli ve ulaşılabilir kılıyor.
+
+                                    Akıllı telefon kullananların en çok tercih ettikleri aksesuarların başında akıllı saatler geliyor. Akıllı saatler, kullandıkları teknoloji ile direkt cep telefonunuza bağlantı sağlıyor. Önemli aramalarınızın, maillerinizin ve mesajlarınızın bildirimlerini direkt olarak saatinizde görmek günlük yaşamınızı ve iş hayatınızı kolaylaştırırken size zaman tasarrufu sağlıyor. Öz Mağazalarındaki akıllı saat fiyatları da aynı telefon fiyatları gibi bütçenizi sarsmıyor.
+
+                                    Navigasyon cihazları da Öz Mağazalarında hayat kolaylaştıran aksesuarlar arasında bulunuyor. Ulaşmak istediğiniz yere en hızlı yoldan gitmenizi sağlayan navigasyon cihazları, Öz Mağazaları avantajlarıyla evlerinize gelerek, özellikle büyük şehirlerdeki trafik çilesini ortadan kaldırıyor. Oto aksesuarlar arasında bulunan navigasyon cihazları, hem sürüş keyfinizi arttırıyor hem de zamanınızdan tasarruf etmenizi sağlıyor.
+                                </p>
+                                @*<button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Kapat
+                                    </button>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 5-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">BİLGİSAYAR EKİPMANLARI</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="~/assets/img/portfolio/pcekipman.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Bilgisayar bileşenleri, bilgisayarınızı daha iyi kullanabilmeniz açısından yardımcı ürünler olarak lanse edilir. Bu bileşenler, size birçok açıdan fayda sağlayacak ve işlerinizi çok daha kolaylaştıracaktır. Farklı tarzdaki bilgisayar bileşenleri sayesinde kendi tarzınızı daha iyi yansıtabilir, böylece bilgisayarınızı kullanmaktan daha büyük keyif alabilirsiniz. Bu özel bileşenler, bilgisayarınızı çok daha kullanışlı hale getirecektir.</p>
+                                @*<button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Kapat
+                                    </button>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 6-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">TELEFON EKİPMANLARI</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="~/assets/img/portfolio/telekipman.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    Modern hayatın en büyük ihtiyaçlarından birisi olan cep telefonları, hayatın her anında kullanıcılarının yanında ve günlük yaşamda kullanıcılara pek çok kolaylık sağlamakta. Günlük hayatın vazgeçilmez bir parçası haline gelen cep telefonları, bankacılıktan eğlenceye, yol tarifinden yüksek kaliteli iletişimden kadar her alanda daima ihtiyaçlara karşılık veriyor ve kullanıcılarına dünyanın kapılarını açıyor.
+
+                                    Hal böyle iken, iletişimden eğlenceye kadar çok geniş bir skalada insanların sorunlarını çözen cep telefonları bazı konularda ek bir desteğe ihtiyaç duyabiliyor. Örneğin otobüs yolculuğu sırasında bir cep telefonunun hoparlörü üzerinden müzik dinlemek pek akıllıca olmayacaktır ancak bu sorunu harici bir kulaklık kullanarak çözebilirsiniz. Aynı şekilde her an cep telefonlarınızı cebinizden veya çantanızdan çıkartamayabilirsiniz, bu gibi durumlarda akıllı saatler ve bileklikler aracılığıyla gelen bildirimleri anlık olarak takip edebilir hatta cep telefonunuza dokunmadan geri bildirim yapabilirsiniz.
+                                </p>
+                                @*<button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Kapat
+                                    </button>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="~/js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>

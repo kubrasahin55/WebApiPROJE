@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="siparisapiModelStoreContainer" CdmEntityContainer="siparisapiEntities2">
+    <EntitySetMapping Name="tblkullanicis">
+      <EntityTypeMapping TypeName="siparisapiModel.tblkullanici">
+        <MappingFragment StoreEntitySet="tblkullanici">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kullaniciadi" ColumnName="kullaniciadi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblmusterilers">
+      <EntityTypeMapping TypeName="siparisapiModel.tblmusteriler">
+        <MappingFragment StoreEntitySet="tblmusteriler">
+          <ScalarProperty Name="musteriid" ColumnName="musteriid" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="sehir" ColumnName="sehir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblsiparisdetays">
+      <EntityTypeMapping TypeName="siparisapiModel.tblsiparisdetay">
+        <MappingFragment StoreEntitySet="tblsiparisdetay">
+          <ScalarProperty Name="siparisdetayid" ColumnName="siparisdetayid" />
+          <ScalarProperty Name="siparisaciklama" ColumnName="siparisaciklama" />
+          <ScalarProperty Name="siparisadet" ColumnName="siparisadet" />
+          <ScalarProperty Name="siparisfiyat" ColumnName="siparisfiyat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblsiparislers">
+      <EntityTypeMapping TypeName="siparisapiModel.tblsiparisler">
+        <MappingFragment StoreEntitySet="tblsiparisler">
+          <ScalarProperty Name="siparisid" ColumnName="siparisid" />
+          <ScalarProperty Name="siparisadi" ColumnName="siparisadi" />
+          <ScalarProperty Name="siparistarihi" ColumnName="siparistarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

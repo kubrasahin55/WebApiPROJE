@@ -1,0 +1,66 @@
+﻿@model IEnumerable<mvcsiparis.Models.mvcsiparisdetay>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @*//bu kısma eklemeler yaptık*@
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a href="@Url.Action("EKLE","siparisdetay")" class="btn btn-danger"><i class="fa fa-plus-square"></i>Sipariş Detay Ekle</a>
+</p>
+<table class="table">
+    <thead class="table-danger">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.siparisaciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.siparisadet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.siparisfiyat)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.siparisaciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.siparisadet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.siparisfiyat)
+            </td>
+            <td>
+                <a href="@Url.Action("EKLE","siparisdetay",new { id = item.siparisdetayid })" class="btn btn-default"><i class="fa fa-pencil-square"></i>Güncelle</a>
+                <a onclick="Sil(@item.siparisdetayid)" class="btn btn-default"><i class="fa fa-trash"></i>Sil</a>
+            </td>
+        </tr>
+    }
+
+</table>
+@section scripts
+    {
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]';
+            if (successMessage != '') alertify.success(successMessage);
+        });
+        function Sil(id)
+        {
+
+            alertify.confirm('silme işlemi', 'Kayıtı silmek istiyormusunuz?', function () {
+                window.location.href = '@Url.Action("Sil","siparisdetay")/' + id;
+            }, null);
+        }
+    </script>
+}
+

@@ -1,0 +1,37 @@
+﻿@model mvcsiparis.Models.mvcsiparisdetay
+@{
+    ViewBag.Title = "Ekle";
+}
+
+<h2>Ekle</h2>
+<div class="form-body">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.siparisdetayid)
+        <div class="form-control" style="background-color :cornflowerblue;">
+            @Html.LabelFor(model => model.siparisaciklama)<br />
+            @Html.EditorFor(model => model.siparisaciklama)
+            @Html.ValidationMessageFor(model => model.siparisaciklama)
+        </div>
+        <div class="form-control" style="background-color :cornflowerblue;">
+            @Html.LabelFor(model => model.siparisadet)<br />
+            @Html.EditorFor(model => model.siparisadet)
+            @Html.ValidationMessageFor(model => model.siparisadet)
+        </div>
+        <div class="form-control" style="background-color :cornflowerblue;">
+            @Html.LabelFor(model => model.siparisfiyat)<br />
+            @Html.EditorFor(model => model.siparisfiyat)
+            @Html.ValidationMessageFor(model => model.siparisfiyat)
+        </div>
+       
+        <div class="form-control">
+            <input type="submit" value="Kaydet" class="btn acordion-button" />
+            <input type="reset" value="Temizle" class="btn acordion-button" />
+        </div>
+    }
+</div>
+@*@section scripts
+    {
+    @Scripts.Render("~/bundles/jqueryval");
+
+    }*@

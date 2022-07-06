@@ -1,0 +1,59 @@
+﻿@model IEnumerable<mvcsiparis.Models.mvcsiparisler>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @*//bu kısma eklemeler yaptık*@
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a href="@Url.Action("EKLE","siparisler")" class="btn btn-danger"><i class="fa fa-plus-square"></i>Sipariş Ekle</a>
+</p>
+<table class="table">
+    <thead class="table-danger">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.siparisadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.siparistarihi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.siparisadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.siparistarihi)
+            </td>
+            <td>
+                <a href="@Url.Action("EKLE","siparisler",new { id = item.siparisid })" class="btn btn-default"><i class="fa fa-pencil-square"></i>Güncelle</a>
+                <a onclick="Sil(@item.siparisid)" class="btn btn-default"><i class="fa fa-trash"></i>Sil</a>
+            </td>
+        </tr>
+    }
+
+</table>
+@section scripts
+    {
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]';
+            if (successMessage != '') alertify.success(successMessage);
+        });
+        function Sil(id)
+        {
+
+            alertify.confirm('silme işlemi', 'Kayıtı silmek istiyormusunuz?', function () {
+                window.location.href = '@Url.Action("Sil","siparisler")/' + id;
+            }, null);
+        }
+    </script>
+}
+
